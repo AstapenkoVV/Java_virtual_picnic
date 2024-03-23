@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.controller.Controller;
 import org.example.model.ReadingFile;
 
 /**
@@ -17,16 +18,7 @@ import org.example.model.ReadingFile;
 
 public class Main {
     public static void main(String[] args) {
-        ReadingFile readingFile = new ReadingFile();
-        System.out.println("readingFile.getString(\"input.txt\") = " +
-                readingFile.getString("input.txt"));
-        System.out.println("readingFile.getCountWord(readingFile.getString(\"input.txt\")) = " +
-                readingFile.getCountWords(readingFile.getString("input.txt")));
-        System.out.println("readingFile.getMaxLengthWord(readingFile.getString(\"input.txt\")) = " +
-                readingFile.getMaxLengthWord(readingFile.getString("input.txt")));
-        readingFile.getWordFrequency(readingFile.getString("input.txt"));
-        System.out.println("readingFile.getLengthWord = " +
-                readingFile.getLengthWord(readingFile.getString("input.txt"),
-                        readingFile.getMaxLengthWord(readingFile.getString("input.txt"))));
+        Controller controller = new Controller();
+        controller.start();
     }
 }
